@@ -1,7 +1,7 @@
-NAME = ex04
+NAME = HarlFilter
 OBJS_DIR = Objs
 
-FILES = main.cpp
+FILES = main.cpp Harl.cpp
 
 SRCS = $(addprefix Sources/, $(FILES))
 

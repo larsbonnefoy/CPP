@@ -34,7 +34,7 @@ void Harl::_error( void ) const {
 void Harl::complain( std::string level ) const {
    
     bool print_error = true;
-    std::string options[4] = {"DEBUG", "INFO", "WARNING", "COMPLAIN"};
+    std::string options[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
     for (int i = 0; i < 4; i++) {
         if (level.compare(options[i]) == 0 ){
