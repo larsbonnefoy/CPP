@@ -15,7 +15,7 @@ Fixed::Fixed(float const val) {
 }
 
 Fixed::Fixed(const Fixed& other) {
-    _value = other.getRawBits();
+    this->_value = other.getRawBits();
 } 
 
 Fixed::~Fixed(void) {
