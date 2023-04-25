@@ -19,11 +19,7 @@
 
 int main(void) {
 
-    ClapTrap *baseclass;
-
     DiamondTrap didi("didi");
-    baseclass = &didi;
-    baseclass->attack("TEST1");
 
     didi.attack("TEST2");
     didi.beRepaired(50);
