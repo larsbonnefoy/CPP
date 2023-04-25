@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: larsbonnefoy <larsbonnefoy@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 15:05:26 by larsbonnefo       #+#    #+#             */
-/*   Updated: 2023/04/25 15:05:27 by larsbonnefo      ###   ########.fr       */
+/*   Created: 2023/04/25 15:05:56 by larsbonnefo       #+#    #+#             */
+/*   Updated: 2023/04/25 15:05:56 by larsbonnefo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "ClapTrap.hpp"
 #include <string>
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
     
     public:
         FragTrap(void);
