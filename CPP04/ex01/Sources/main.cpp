@@ -2,7 +2,6 @@
 #include "../Includes/Cat.hpp"
 #include "../Includes/Dog.hpp"
 #include "../Includes/Brain.hpp"
-#include <cstdlib>
 
 int main(void) {
 
@@ -33,9 +32,31 @@ int main(void) {
         new Dog()
     };
 
-    std::cout << "==============================" << std::endl;
+    Animal *cat = array[0];
+    Brain *brainCat = cat->getBrain();
+    brainCat->setIdea("Do I go out of in?");
+    brainCat->setIdea("MEOMEEOMEOMEOME");
+    brainCat->setIdea("EAT EAT EAT");
+    std::cout << cat->getBrain()->getIdea(0) << std::endl;
+    std::cout << cat->getBrain()->getIdea(1) << std::endl;
+    std::cout << cat->getBrain()->getIdea(2) << std::endl;
+
+    Animal	*copycat = new Cat(*(Cat *)(array[0]));
+
+    copycat->getBrain()->replaceIdea("NO HUNGRY", 2);
+
+    std::cout << cat->getBrain()->getIdea(0) << std::endl;
+    std::cout << cat->getBrain()->getIdea(1) << std::endl;
+    std::cout << cat->getBrain()->getIdea(2) << std::endl;
+    std::cout << copycat->getBrain()->getIdea(0) << std::endl;
+    std::cout << copycat->getBrain()->getIdea(1) << std::endl;
+    std::cout << copycat->getBrain()->getIdea(2) << std::endl;
+
     for (int i = 0; i < 4; i++) {
         delete array[i];
     }
+    std::cout << "==============================" << std::endl;
+    delete copycat;
+    std::cout << "==============================" << std::endl;
     return (0);
-}
+} 

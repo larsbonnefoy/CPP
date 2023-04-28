@@ -11,6 +11,7 @@ Dog::Dog(void) : Animal() {
 Dog::Dog(const Dog &other) {
     std::cout << "Dog Copy constructor called" << std::endl;
     this->_type = other._type;
+    this->_brain = new Brain(*(other._brain));
 }
 
 Dog::~Dog(void) {
@@ -21,9 +22,14 @@ Dog::~Dog(void) {
 Dog &Dog::operator=(const Dog &other) {
     std::cout << "Dog Assigment operator called" << std::endl;
     this->_type = other._type;
+    *this->_brain = *other._brain;
     return (*this);
 }
 
 void Dog::makeSound(void) const {
     std::cout << "BARK BARK" << std::endl;
+}
+
+Brain *Dog::getBrain(void) const {
+    return (this->_brain);
 }

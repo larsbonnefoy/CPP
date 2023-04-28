@@ -1,4 +1,5 @@
 #include "../Includes/Animal.hpp"
+#include "../Includes/Brain.hpp"
 
 Animal::Animal(void) : _type("Default"){
     std::cout << "Animal Default Constructor Called" << std::endl;
@@ -24,4 +25,8 @@ std::string Animal::getType(void) const {
 
 void Animal::makeSound(void) const {
     std::cout << "*Random Animal Noises*" << std::endl;
+}
+
+Brain *Animal::getBrain(void) const {
+    return (NULL);
 }

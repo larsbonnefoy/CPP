@@ -47,7 +47,7 @@ void Brain::setIdea(std::string idea) {
     }
     else {
         int i = 0;
-        while (!this->_ideas[i].empty() && i < 100) {
+        while (this->_ideas[i] != "" && i < 100) {
             i++;
         } 
         if (i == 100) {
