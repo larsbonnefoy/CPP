@@ -5,7 +5,6 @@
 #include "../Includes/AMateria.hpp"
 #include "../Includes/MateriaSource.hpp"
 #include "../Includes/IMateriaSource.hpp"
-#include <algorithm>
 
 int main(void) {
 
@@ -50,7 +49,7 @@ int main(void) {
     copyme->unequip(1);
     //copied char cannont use the materia anymore
     copyme->use(1, *bob);
-    std::cout << "default character can still use its materia: " << std::endl;
+    std::cout << "default character can still use its materia: ";
     me->use(1, *bob);
     
     delete bob; 

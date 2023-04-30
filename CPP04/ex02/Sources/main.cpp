@@ -9,17 +9,17 @@ int main(void) {
     std::cout << "=========DEEP COPY============" << std::endl;
     Brain a;
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 5; i++) {
         a.setIdea("BeepBoop");
     }
 
     Brain b(a);
 
-    for (int i = 10; i < 20; i++) {
+    for (int i = 3; i < 5; i++) {
         b.replaceIdea("MEEP", i);
     }
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 5; i++) {
         std::cout << a.getIdea(i) << std::endl;
         std::cout << b.getIdea(i) << std::endl;
         std::cout << "===========" << std::endl;
@@ -38,9 +38,9 @@ int main(void) {
     brainCat->setIdea("Do I go out of in?");
     brainCat->setIdea("MEOMEEOMEOMEOME");
     brainCat->setIdea("EAT EAT EAT");
-    std::cout << cat->getBrain()->getIdea(0) << std::endl;
-    std::cout << cat->getBrain()->getIdea(1) << std::endl;
-    std::cout << cat->getBrain()->getIdea(2) << std::endl;
+    std::cout << cat->getType() << ": " << cat->getBrain()->getIdea(0) << std::endl;
+    std::cout << cat->getType() << ": " << cat->getBrain()->getIdea(1) << std::endl;
+    std::cout << cat->getType() << ": " << cat->getBrain()->getIdea(2) << std::endl;
 
     AAnimal	*copycat = new Cat(*(Cat *)(array[0]));
 

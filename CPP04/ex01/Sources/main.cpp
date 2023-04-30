@@ -13,14 +13,21 @@ int main(void) {
     }
 
     Brain b(a);
+    Brain c;
+
+    c = a;
 
     for (int i = 10; i < 20; i++) {
         b.replaceIdea("MEEP", i);
     }
 
+    for (int i = 10; i < 20; i++) {
+        c.replaceIdea("M00P", i);
+    }
     for (int i = 0; i < 20; i++) {
         std::cout << a.getIdea(i) << std::endl;
         std::cout << b.getIdea(i) << std::endl;
+        std::cout << c.getIdea(i) << std::endl;
         std::cout << "===========" << std::endl;
     }
     std::cout << "==============================" << std::endl;
