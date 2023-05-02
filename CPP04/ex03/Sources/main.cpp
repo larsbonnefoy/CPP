@@ -46,18 +46,24 @@ int main(void) {
     me->equip(tmp);
 
     ICharacter *bob = new Character("bob"); 
+    me->use(-1, *bob);
     me->use(0, *bob);
+    me->use(2, *bob);
     me->use(1, *bob);
     me->use(3, *bob);
     me->use(4, *bob);
+    me->unequip(-1);
     me->unequip(2);
+    me->unequip(2);
+    me->use(2, *bob);
 
     std::cout << "=======Copy test=======" << std::endl;
     ICharacter *copyme = new Character(*(Character *)me);
     AMateria *dropedDown2;
     copyme->use(0, *bob);
     copyme->use(1, *bob);
-    copyme->use(2, *bob);
+    copyme->use(2, *bob); //not working as it has been copied from previous char
+    copyme->use(3, *bob);
     dropedDown2 = ((Character *)copyme)->getMateria(1);
     copyme->unequip(1);
     //copied char cannont use the materia anymore
