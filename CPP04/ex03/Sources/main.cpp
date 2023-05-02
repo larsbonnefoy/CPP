@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: larsbonnefoy <larsbonnefoy@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/02 12:29:22 by larsbonnefo       #+#    #+#             */
+/*   Updated: 2023/05/02 12:29:23 by larsbonnefo      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../Includes/Character.hpp"
 #include "../Includes/ICharacter.hpp"
 #include "../Includes/Cure.hpp"

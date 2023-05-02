@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: larsbonnefoy <larsbonnefoy@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/02 12:25:33 by larsbonnefo       #+#    #+#             */
+/*   Updated: 2023/05/02 12:25:39 by larsbonnefo      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../Includes/WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal(void) : _type("Default WRONG animal") {

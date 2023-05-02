@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: larsbonnefoy <larsbonnefoy@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/02 12:29:25 by larsbonnefo       #+#    #+#             */
+/*   Updated: 2023/05/02 12:29:25 by larsbonnefo      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../Includes/MateriaSource.hpp"
 
 MateriaSource::MateriaSource(void) {
