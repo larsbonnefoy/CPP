@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex01
+NAME = ex02
 OBJS_DIR = Objs
 
 FILES = main.cpp AAnimal.cpp Dog.cpp Cat.cpp Brain.cpp

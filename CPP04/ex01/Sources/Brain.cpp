@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../Includes/Brain.hpp"
-
 #include <iostream>
 
 Brain::Brain(void) {
