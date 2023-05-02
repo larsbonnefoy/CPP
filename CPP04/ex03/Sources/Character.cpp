@@ -50,14 +50,13 @@ std::string const &Character::getName(void) const {
     return (this->_name);
 }
 
-/*
 AMateria *Character::getMateria(int idx) const {
     if (idx >= 0 && idx <= 3) {
         return (this->_inventory[idx]);
     }
     return (nullptr);
 }
-*/
+
 void Character::equip(AMateria *m) {
     for (int i = 0; i < 4; i++) {
         if (this->_inventory[i] == nullptr) {
@@ -65,6 +64,7 @@ void Character::equip(AMateria *m) {
             return ;
         }
     }
+    delete m;
     std::cout << "Inventory Full" << std::endl;
 }
 

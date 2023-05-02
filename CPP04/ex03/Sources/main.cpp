@@ -42,10 +42,11 @@ int main(void) {
 
     std::cout << "=======Copy test=======" << std::endl;
     ICharacter *copyme = new Character(*(Character *)me);
+    AMateria *dropedDown2;
     copyme->use(0, *bob);
     copyme->use(1, *bob);
     copyme->use(2, *bob);
-    //problem: cannot get ptr of materia of a copied class as no function is defined in Iterface => unequiping a materia form a copied class will create a leak;
+    dropedDown2 = ((Character *)copyme)->getMateria(1);
     copyme->unequip(1);
     //copied char cannont use the materia anymore
     copyme->use(1, *bob);
@@ -57,5 +58,6 @@ int main(void) {
     delete copyme;
     delete src;
     delete dropedDown;
+    delete dropedDown2;
     return 0;
 }
