@@ -3,27 +3,30 @@
 
 #include "Bureaucrat.hpp"
 #include <string>
-class Form {
+class AForm {
 
-    private:
+    protected:
         const std::string   _name;
+        const std::string   _target;
         bool                _signed;
         const int           _signGrade;
         const int           _execGrade;
 
     public:
-        Form(void);
-        Form(const std::string name, const int signGrade, const int execGrade);
-        Form(const Form &other);
-        ~Form(void);
+        AForm(void);
+        AForm(const std::string name, const int signGrade, const int execGrade);
+        AForm(const Form &other);
+        virtual ~AForm(void);
         Form& operator=(const Form& other);
 
-        
+
+        //quelle fonction mettre en pure virtual?
         std::string getName(void) const;
         int         getSigned(void) const;
         int         getSignGrade(void) const;
         int         getExecGrade(void) const;
-        void        beSigned(Bureaucrat& bureaucrat);
+        virtual void        beSigned(Bureaucrat& bureaucrat) = 0;
+        virtual void        execute(Bureaucrat& executor) = 0;
 
         class GradeTooHighException : public std::exception {
             public:
