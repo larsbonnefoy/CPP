@@ -57,7 +57,7 @@ void Bureaucrat::decrGrade(void) {
     }
 }
 
-void Bureaucrat::signAForm(AForm &form) {
+void Bureaucrat::signForm(AForm &form) {
     try {
         form.beSigned(*this);
         std::cout << this->getName() << " signed " << form.getName() << std::endl;

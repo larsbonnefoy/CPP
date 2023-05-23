@@ -30,7 +30,7 @@ int main(void){
     std::cout << test.getTarget() << std::endl;
     employe1.executeForm(test);
     bigBoss.executeForm(test);
-    employe1.signAForm(test);
+    employe1.signForm(test);
     employe1.executeForm(test);
     bigBoss.executeForm(test);
     std::cout << "================ROBOTOMY============================" << std::endl;
@@ -39,8 +39,8 @@ int main(void){
     std::cout << robot.getTarget() << std::endl;
     employe2.executeForm(robot);
     bigBoss.executeForm(robot);
-    employe2.signAForm(robot);
-    bigBoss.signAForm(robot);
+    employe2.signForm(robot);
+    bigBoss.signForm(robot);
     employe2.executeForm(robot);
     bigBoss.executeForm(robot);
     std::cout << "================PRESIDENT============================" << std::endl;
@@ -50,8 +50,8 @@ int main(void){
     //prisoner.execute(bigBoss); ->will crash if not in try catch block !
     employe3.executeForm(prisoner);
     bigBoss.executeForm(prisoner);
-    employe3.signAForm(prisoner);
-    bigBoss.signAForm(prisoner);
+    employe3.signForm(prisoner);
+    bigBoss.signForm(prisoner);
     employe3.executeForm(prisoner);
     bigBoss.executeForm(prisoner);
     
