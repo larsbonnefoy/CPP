@@ -1,11 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lbonnefo <lbonnefo@student.s19.be >        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/23 13:12:32 by lbonnefo          #+#    #+#             */
+/*   Updated: 2023/05/23 13:13:08 by lbonnefo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../Includes/Bureaucrat.hpp"
 #include <exception>
 #include <iostream>
 
-//dans le cas d'un catch, supprimer la memoire, la rendre inaccessible??
-//comment gerer le cas ou le code s'est mal comporte
-//=> tout mettre dans le meme bloc de try, en effet s'il y a une erreur
-//on va directement sortir du block => on va pas acceder aux lignes de codes en dessous
 int main(void){
     std::cout << "################COPY and ASSIGNMENT constructors#############" << std::endl;
     Bureaucrat A("A", 100);
@@ -22,7 +30,7 @@ int main(void){
     try {
         Bureaucrat chef("Michelle", 2);
         Bureaucrat notAChef("Remy", 149);
-        Bureaucrat smallBoy("smallBoy", 1000000); //quand qqch est dans un block try on peut pas y acceder de l'exterieur
+        Bureaucrat smallBoy("smallBoy", 1000000);
         Bureaucrat bigBoy("smallBoy", 0); //this line is never read as the above line throws an exception
         std::cout << smallBoy << std::endl; 
     }

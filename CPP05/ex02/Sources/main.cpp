@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lbonnefo <lbonnefo@student.s19.be >        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/23 13:14:47 by lbonnefo          #+#    #+#             */
+/*   Updated: 2023/05/23 13:14:48 by lbonnefo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../Includes/Bureaucrat.hpp"
 #include "../Includes/AForm.hpp"
 #include "../Includes/ShrubberyCreationForm.hpp"
