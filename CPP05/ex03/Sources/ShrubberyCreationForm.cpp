@@ -6,7 +6,7 @@
 /*   By: lbonnefo <lbonnefo@student.s19.be >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 13:16:01 by lbonnefo          #+#    #+#             */
-/*   Updated: 2023/05/23 13:16:02 by lbonnefo         ###   ########.fr       */
+/*   Updated: 2023/05/23 13:31:58 by lbonnefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
     this->setTarget(target);
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other) {
-    *this = other; 
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other)
+    : AForm("ShrubberyCreationForm", 145, 137) {
+    this->setTarget(other.getTarget());
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {

@@ -6,7 +6,7 @@
 /*   By: lbonnefo <lbonnefo@student.s19.be >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 13:15:58 by lbonnefo          #+#    #+#             */
-/*   Updated: 2023/05/23 13:15:59 by lbonnefo         ###   ########.fr       */
+/*   Updated: 2023/05/23 13:32:50 by lbonnefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target)
     this->setTarget(target);
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other) {
-    *this = other; 
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other)
+    : AForm("RobotomyRequestForm", 72, 45) {
+    this->setTarget(other.getTarget());
 }
 
 RobotomyRequestForm::~RobotomyRequestForm() {
