@@ -12,6 +12,6 @@ int main(void){
     Base &rtestPtr = *testPtr;
     indentify(testPtr);
     indentify(rtestPtr);
-
+    delete testPtr;
     return (0);
 }
