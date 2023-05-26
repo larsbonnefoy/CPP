@@ -22,6 +22,7 @@ int main(void) {
     DiamondTrap didi("didi");
 
     didi.attack("TEST2");
+    didi.attack(NULL);
     didi.beRepaired(50);
     std::cout <<didi.getName()<< " has " << didi.getHP() << " HP left"<< std::endl;
     didi.takeDamage(200);
