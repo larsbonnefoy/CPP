@@ -6,13 +6,13 @@
 template<typename T>
 class Array {
     private:
-        unsigned _size; //catch neg value? (or will not compile??)
+        unsigned _size;
         T *_array;
 
     public:
         Array(void);
         Array(int n);
-        Array(const Array<T>& other); //specifier le type? (bizarre de copier deux arrays de type diff)
+        Array(const Array<T>& other);
         ~Array(void);
         Array<T>& operator=(const Array<T>& other);
         T& operator[](unsigned int);
@@ -29,7 +29,6 @@ template<typename T>
 Array<T>::Array(void) : _size(0), _array(nullptr){
 }
 
-//set to default value, what if type has not default '0' val, null ?
 template<typename T>
 Array<T>::Array(int n) : _size(n) {
     _array = new T[n];
