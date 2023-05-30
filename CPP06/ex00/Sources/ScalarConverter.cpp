@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScalarConverter.cpp                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lbonnefo <lbonnefo@student.s19.be >        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/30 10:01:32 by lbonnefo          #+#    #+#             */
+/*   Updated: 2023/05/30 10:04:19 by lbonnefo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../Includes/ScalarConversion.hpp"
 
 #include<iostream>
@@ -83,7 +95,7 @@ void ScalarConverter::convert(std::string str) {
              _fromDoubleLitteral(str);
             break;
         default:
-            std::cout << "Impossible convertion\nSupported types are <char>, <int>, "
+            std::cout << "Impossible conversion\nSupported types are <char>, <int>, "
 		    << "<float> and <double>\n";
             break;
     }
