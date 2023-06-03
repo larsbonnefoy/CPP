@@ -13,7 +13,7 @@
 NAME = RPN
 OBJS_DIR = Objs
 
-FILES = main.cpp 
+FILES = main.cpp RPN.cpp
 
 SRCS = $(addprefix Sources/, $(FILES))
 

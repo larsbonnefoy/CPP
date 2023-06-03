@@ -13,7 +13,7 @@
 NAME = btc
 OBJS_DIR = Objs
 
-FILES = main.cpp
+FILES = main.cpp BitcoinExchange.cpp
 
 SRCS = $(addprefix Sources/, $(FILES))
 
