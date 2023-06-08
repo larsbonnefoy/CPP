@@ -14,7 +14,7 @@ NAME = PmergeMe
 
 OBJS_DIR = Objs
 
-FILES = main.cpp
+FILES = main.cpp PmergeMe.cpp
 
 SRCS = $(addprefix Sources/, $(FILES))
 
@@ -22,7 +22,7 @@ OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))
 
 # ===---===---===---===---===---===---===---===---===---===---===---===---
 
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
+CFLAGS = -Wall -Wextra -Werror -Wno-unused-variable
 CPPFLAGS = -std=c++98 -pedantic
 INCLUDES = -I Includes
 
