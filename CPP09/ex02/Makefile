@@ -22,7 +22,7 @@ OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))
 
 # ===---===---===---===---===---===---===---===---===---===---===---===---
 
-CFLAGS = -Wall -Wextra -Werror -Wno-unused-variable
+CFLAGS = -Wall -Wextra -Werror 
 CPPFLAGS = -std=c++98 -pedantic
 INCLUDES = -I Includes
 

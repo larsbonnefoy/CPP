@@ -26,7 +26,7 @@ double elapsed(struct timeval begin, struct timeval	end);
 
 template<typename T>
 void printCont(T &cont) {
-//    std::cout << "Len = " << cont.size() << std::endl;
+    std::cout << "Len = " << cont.size() << std::endl;
 
     for (typename T::iterator it = cont.begin(); it != cont.end(); ++it) {
         std::cout << *it << " ";
@@ -144,10 +144,6 @@ T getJNumber(T nb)
 template <typename T>
 void insert(T &main, T&pend) {
 
-    std::cout << "MAIN: ";
-    printCont(main);
-    std::cout << "PEND: ";
-    printCont(pend);
     unsigned int maxSize = pend.size();
     unsigned int indexJ = 2;
     unsigned int jn = getJNumber(indexJ);
@@ -162,10 +158,6 @@ void insert(T &main, T&pend) {
     unsigned int insertedAmount = 0;
 
     while (jn <= maxSize) {
-        std::cout << "################" << std::endl;
-        std::cout << "JN = " << jn << std::endl;
-        std::cout << "################" << std::endl;
-
 
         if (jn == 1) {
             main.insert(main.begin(), *itPendStart);
@@ -175,19 +167,14 @@ void insert(T &main, T&pend) {
             std::advance(itPendEnd, jn_1 - jn_2);
             std::advance(itPendStart, jn - jn_1);
             
-            std::cout << "Start Pend = [" << *itPendStart << "]" << "(at distance " << std::distance(pend.begin(), itPendStart) << ")" << std::endl;
             typename T::iterator tmpIt = itPendStart;
             while (tmpIt != itPendEnd) {
 
                 //Really not optimal for lists as it goes through the whole list all the time.
                 typename T::iterator itMainEnd = main.begin();
                 std::advance(itMainEnd, jn + insertedAmount + 1);
-                std::cout << "-------------" << std::endl; 
-                std::cout << "Insert " << *tmpIt << " before value {" 
-                    << *itMainEnd << "} in main chain" << "(at distance " << std::distance(main.begin(), itMainEnd) << ")"<< std::endl; 
                 itInsertPos = std::lower_bound(main.begin(), itMainEnd, *tmpIt);
                 main.insert(itInsertPos, *tmpIt);
-                printCont(main);
                 insertedAmount++;
                 tmpIt--;
             }
