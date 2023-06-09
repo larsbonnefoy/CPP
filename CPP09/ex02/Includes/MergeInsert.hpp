@@ -182,11 +182,21 @@ void insert(T &main, T&pend) {
             typename T::iterator tmpIt = itPendStart;
             while (tmpIt != itPendEnd) {
 
+                unsigned int toAdvance = jn + insertedAmount + 1;
+                
                 //Really not optimal for lists as it goes through the whole list all the time.
                 typename T::iterator itMainEnd = main.begin();
-                std::advance(itMainEnd, jn + insertedAmount + 1);
+                
+                if (toAdvance > main.size()) {
+                    itMainEnd = main.end();
+                }
+                else {
+                    std::advance(itMainEnd, toAdvance);
+                }
+                
                 itInsertPos = std::lower_bound(main.begin(), itMainEnd, *tmpIt);
                 main.insert(itInsertPos, *tmpIt);
+                
                 insertedAmount++;
                 tmpIt--;
             }

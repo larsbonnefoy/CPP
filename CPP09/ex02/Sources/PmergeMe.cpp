@@ -29,8 +29,18 @@ double elapsed(struct timeval	begin, struct timeval	end) {
 
 void parseInput(char **av, std::vector<int> &vec, std::list<int> &lst, std::deque<int> &deq) {
     for (unsigned int i = 1; av[i]; i++){
+        
+        int j = 0;
+        while (av[i][j]) {
+            if (!isdigit(av[i][j])) {
+                throw InvalidValueError(); 
+            }
+            j++;
+        }
+
         std::stringstream ss(av[i]);
         int val;
+        
 
         ss >> val;
         if (ss.fail() || val < 0) {
