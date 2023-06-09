@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/MergeInsert.hpp"
-#include <algorithm>
-#include <iterator>
+#include "../Includes/PmergeMe.hpp"
 #include <sys/time.h>
 
 int main(int ac, char **av) {
