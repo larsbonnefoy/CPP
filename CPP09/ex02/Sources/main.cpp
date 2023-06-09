@@ -18,7 +18,9 @@ int main(int ac, char **av) {
     std::deque<int> deq, deqSorted, deqSTL;
     std::list<int> lst, lstSorted, lstSTL;
     struct timeval vecBegin, vecEnd, listBegin, listEnd, deqBegin, deqEnd, vecSTLBegin, vecSTLEnd, deqSTLBegin, deqSTLEnd, lstSTLBegin, lstSTLEnd;
+    struct timeval dataBegin, dataEnd;
 
+    gettimeofday(&dataBegin, 0);
     try {
         if (ac < 2) {
             throw InvalidValueError();
@@ -32,6 +34,8 @@ int main(int ac, char **av) {
         std::cout << e.what() << std::endl;
         return (1);
     }
+    gettimeofday(&dataEnd, 0);
+
     std::cout << "Before: ";
     printCont(vec);
 
@@ -63,6 +67,7 @@ int main(int ac, char **av) {
 
     std::cout << "After: ";
     printCont(vecSorted);
+    std::cout << std::endl << "Time to process Data " << elapsed(dataBegin, dataEnd) << "us" << std::endl << std::endl;
     std::cout << "=======DEQ==========" << std::endl;
     std::cout << "Time to process a range of "<< deq.size() <<" elements with std::deque: " << elapsed(deqBegin, deqEnd) << "us" << std::endl;
     std::cout << "Is deque sorted : " <<  std::is_sorted(deqSorted.begin(), deqSorted.end()) << std::endl;
@@ -77,5 +82,6 @@ int main(int ac, char **av) {
     std::cout << "Time to process a range of " << vec.size() <<" elements with std::vec: " << elapsed(vecBegin, vecEnd) << "us" << std::endl;
     std::cout << "Is list sorted : " <<  std::is_sorted(vecSorted.begin(), vecSorted.end()) << std::endl;
     std::cout << "Time to process a range of " << vecSTL.size() <<" elements with std::vecSTL " << elapsed(vecSTLBegin, vecSTLEnd) << "us" << std::endl;
+
     return (0);
 }
