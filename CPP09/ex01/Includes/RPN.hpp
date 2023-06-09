@@ -17,6 +17,12 @@ class DivisionByZeroError : public std::exception {
         const char* what(void) const throw();
 };
 
+
+class UnvalidOperatorError : public std::exception {
+    public:
+        const char* what(void) const throw();
+};
+
 class UnvalidStackSizeError : public std::exception {
     public:
         const char* what(void) const throw();

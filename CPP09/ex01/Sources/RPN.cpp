@@ -10,6 +10,8 @@ int RNP(std::string &inputStr){
         else if (inputStr[i] == SPACE)
             continue;
         else {
+            if (stack.size() < 2)
+                throw UnvalidStackSizeError();
             switch (inputStr[i]) {
                 case ADD:
                     topVal = stack.top();
@@ -55,3 +57,7 @@ const char* UnvalidStackSizeError::what() const throw() {
 const char* UnvalidCharacterError::what() const throw() {
     return ("[UnvalidCharacterError] : Unvalid character in input");
 };
+
+const char* UnvalidOperatorError::what() const throw() {
+    return ("[OperatorError] : Unvalid operation");
+}

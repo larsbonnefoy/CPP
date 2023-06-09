@@ -97,7 +97,6 @@ void getDataBase(std::map<std::string, double> &dataMap) {
 void convertValues(std::map<std::string, double> &dataMap, std::string inputFile) {
     std::string line;
     std::ifstream infile;
-    (void) dataMap;
 
     infile.open(inputFile, std::ios::in);
     if (!infile.is_open()) {
@@ -116,6 +115,9 @@ void convertValues(std::map<std::string, double> &dataMap, std::string inputFile
             try {
                 parseDate(dateString);
                 parseVal(value);
+                if (dateString < dataMap.begin()->first) {
+                    throw DateError();
+                }
                 it = dataMap.find(dateString);
                 if (it != dataMap.end()) {
                     std::cout << dateString << " => " << value << " = ";
